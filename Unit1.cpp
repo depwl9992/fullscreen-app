@@ -9,17 +9,14 @@
 #pragma resource "*.dfm"
 TForm1 *Form1;
 //---------------------------------------------------------------------------
-__fastcall TForm1::TForm1(TComponent* Owner)
-	: TForm(Owner) {
+__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
 	Button1->Visible = true;
 	Button2->Visible = false;
 	Label1->Caption = (String)"Height: " + Form1->Height;
 	Label2->Caption = (String)"Width: " + Form1->Width;
-	Form2->Visible = true;
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm1::Button1Click(TObject *Sender)
-{
+void __fastcall TForm1::Button1Click(TObject *Sender) {
 	Form1->BorderStyle=bsNone;
 	Form1->WindowState = wsMaximized;
 	Button1->Visible = false;
@@ -31,8 +28,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	Label2->Font->Color = clWhite;
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm1::Button2Click(TObject *Sender)
-{
+void __fastcall TForm1::Button2Click(TObject *Sender) {
 	Form1->BorderStyle=bsSizeable;
 	Form1->WindowState = wsNormal;
 	Button1->Visible = true;
@@ -44,8 +40,7 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 	Label2->Font->Color = clBlack;
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm1::FormKeyPress(TObject *Sender, System::WideChar &Key)
-{
+void __fastcall TForm1::FormKeyPress(TObject *Sender, System::WideChar &Key) {
 	if (Key == VK_ESCAPE) {
 		Key = 0;
 		Button2->Click();
