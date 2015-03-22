@@ -1,10 +1,9 @@
 object Presentation: TPresentation
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
   Caption = 'Presentation'
-  ClientHeight = 148
-  ClientWidth = 201
+  ClientHeight = 138
+  ClientWidth = 191
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
