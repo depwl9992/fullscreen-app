@@ -20,3 +20,12 @@ void __fastcall TPresentation::FormResize(TObject *Sender) {
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TPresentation::FormKeyDown(TObject *Sender, WORD &Key, TShiftState Shift) {
+	if (Key == VK_ESCAPE) {
+        Key = 0;
+		Controller->ToggleFS->Down = false;
+		Controller->ToggleFSClick(this);
+	}
+}
+//---------------------------------------------------------------------------
+

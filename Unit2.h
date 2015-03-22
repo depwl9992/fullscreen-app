@@ -13,6 +13,7 @@ class TPresentation : public TForm
 {
 __published:	// IDE-managed Components
 	void __fastcall FormResize(TObject *Sender);
+	void __fastcall FormKeyDown(TObject *Sender, WORD &Key, TShiftState Shift);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TPresentation(TComponent* Owner);
