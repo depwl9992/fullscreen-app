@@ -1,9 +1,10 @@
-object Form2: TForm2
+object Presentation: TPresentation
   Left = 0
   Top = 0
-  Caption = 'Form2'
-  ClientHeight = 77
-  ClientWidth = 170
+  BorderStyle = bsSingle
+  Caption = 'Presentation'
+  ClientHeight = 148
+  ClientWidth = 201
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,22 +14,4 @@ object Form2: TForm2
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Button1: TButton
-    Left = 8
-    Top = 8
-    Width = 75
-    Height = 25
-    Caption = 'Fullscreen'
-    TabOrder = 0
-    OnClick = Button1Click
-  end
-  object Button2: TButton
-    Left = 8
-    Top = 39
-    Width = 75
-    Height = 25
-    Caption = 'Window'
-    TabOrder = 1
-    OnClick = Button2Click
-  end
 end

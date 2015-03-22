@@ -9,7 +9,7 @@
 #include <Vcl.Forms.hpp>
 #include "Unit2.h"
 //---------------------------------------------------------------------------
-class TForm1 : public TForm
+class TController : public TForm
 {
 __published:	// IDE-managed Components
 	TButton *Button1;
@@ -21,9 +21,9 @@ __published:	// IDE-managed Components
 	void __fastcall FormKeyPress(TObject *Sender, System::WideChar &Key);
 private:	// User declarations
 public:		// User declarations
-	__fastcall TForm1(TComponent* Owner);
+	__fastcall TController(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE TController *Controller;
 //---------------------------------------------------------------------------
 #endif

@@ -7,43 +7,33 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TForm1 *Form1;
+TController *Controller;
 //---------------------------------------------------------------------------
-__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
+__fastcall TController::TController(TComponent* Owner) : TForm(Owner) {
+	Show();
 	Button1->Visible = true;
 	Button2->Visible = false;
-	Label1->Caption = (String)"Height: " + Form1->Height;
-	Label2->Caption = (String)"Width: " + Form1->Width;
+	Label1->Caption = (String)"Height: " + Controller->Height;
+	Label2->Caption = (String)"Width: " + Controller->Width;
 }
-//---------------------------------------------------------------------------
-void __fastcall TForm1::Button1Click(TObject *Sender) {
-	Form1->BorderStyle=bsNone;
-	Form1->WindowState = wsMaximized;
-	Button1->Visible = false;
-	Button2->Visible = true;
-	Label1->Caption = (String)"Height: " + Form1->Height;
-	Label2->Caption = (String)"Width: " + Form1->Width;
-	Form1->Color = clBlack;
-	Label1->Font->Color = clWhite;
-	Label2->Font->Color = clWhite;
+
+void __fastcall TController::Button1Click(TObject *Sender) {
+	Presentation->BorderStyle=bsNone;
+	Presentation->WindowState = wsMaximized;
+	Label1->Caption = (String)"Height: " + Presentation->Height;
+	Label2->Caption = (String)"Width: " + Presentation->Width;
 }
-//---------------------------------------------------------------------------
-void __fastcall TForm1::Button2Click(TObject *Sender) {
-	Form1->BorderStyle=bsSizeable;
-	Form1->WindowState = wsNormal;
-	Button1->Visible = true;
-	Button2->Visible = false;
-	Label1->Caption = (String)"Height: " + Form1->Height;
-	Label2->Caption = (String)"Width: " + Form1->Width;
-	Form1->Color = clBtnFace;
-	Label1->Font->Color = clBlack;
-	Label2->Font->Color = clBlack;
+
+void __fastcall TController::Button2Click(TObject *Sender) {
+	Presentation->BorderStyle=bsSizeable;
+	Presentation->WindowState = wsNormal;
+	Label1->Caption = (String)"Height: " + Presentation->Height;
+	Label2->Caption = (String)"Width: " + Presentation->Width;
 }
-//---------------------------------------------------------------------------
-void __fastcall TForm1::FormKeyPress(TObject *Sender, System::WideChar &Key) {
+
+void __fastcall TController::FormKeyPress(TObject *Sender, System::WideChar &Key) {
 	if (Key == VK_ESCAPE) {
 		Key = 0;
 		Button2->Click();
 	}
 }
-//---------------------------------------------------------------------------

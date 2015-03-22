@@ -7,19 +7,9 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TForm2 *Form2;
+TPresentation *Presentation;
 //---------------------------------------------------------------------------
-__fastcall TForm2::TForm2(TComponent* Owner) : TForm(Owner) {
+__fastcall TPresentation::TPresentation(TComponent* Owner) : TForm(Owner) {
 	Show();
+
 }
-//---------------------------------------------------------------------------
-void __fastcall TForm2::Button1Click(TObject *Sender)
-{
-	Form1->Button1->Click();
-}
-//---------------------------------------------------------------------------
-void __fastcall TForm2::Button2Click(TObject *Sender)
-{
-	Form1->Button2->Click();
-}
-//---------------------------------------------------------------------------
