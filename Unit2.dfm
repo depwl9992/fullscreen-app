@@ -4,9 +4,9 @@ object Presentation: TPresentation
   Caption = 'Presentation'
   ClientHeight = 138
   ClientWidth = 191
-  Color = clBtnFace
+  Color = clBlack
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clWindow
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
