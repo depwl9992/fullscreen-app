@@ -20,15 +20,11 @@ __fastcall TController::TController(TComponent* Owner) : TForm(Owner) {
 void __fastcall TController::Button1Click(TObject *Sender) {
 	Presentation->BorderStyle=bsNone;
 	Presentation->WindowState = wsMaximized;
-	Label1->Caption = (String)"Height: " + Presentation->Height;
-	Label2->Caption = (String)"Width: " + Presentation->Width;
 }
 
 void __fastcall TController::Button2Click(TObject *Sender) {
 	Presentation->BorderStyle=bsSizeable;
 	Presentation->WindowState = wsNormal;
-	Label1->Caption = (String)"Height: " + Presentation->Height;
-	Label2->Caption = (String)"Width: " + Presentation->Width;
 }
 
 void __fastcall TController::FormKeyPress(TObject *Sender, System::WideChar &Key) {
