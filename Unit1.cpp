@@ -11,10 +11,9 @@ TController *Controller;
 //---------------------------------------------------------------------------
 __fastcall TController::TController(TComponent* Owner) : TForm(Owner) {
 	Show();
-	Button1->Visible = true;
-	Button2->Visible = false;
-	Label1->Caption = (String)"Height: " + Controller->Height;
-	Label2->Caption = (String)"Width: " + Controller->Width;
+	if (Presentation) {
+		Pre_Resize();
+	}
 }
 
 void __fastcall TController::Button1Click(TObject *Sender) {
