@@ -42,22 +42,14 @@ object Controller: TController
     Font.Style = []
     ParentFont = False
   end
-  object Button1: TButton
+  object ToggleFS: TSpeedButton
     Left = 8
     Top = 8
-    Width = 75
-    Height = 25
-    Caption = 'Full Screen'
-    TabOrder = 0
-    OnClick = Button1Click
-  end
-  object Button2: TButton
-    Left = 8
-    Top = 39
-    Width = 91
-    Height = 25
-    Caption = 'Exit Fullscreen'
-    TabOrder = 1
-    OnClick = Button2Click
+    Width = 65
+    Height = 41
+    AllowAllUp = True
+    GroupIndex = 1
+    Caption = 'Fullscreen'
+    OnClick = ToggleFSClick
   end
 end

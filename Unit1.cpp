@@ -16,20 +16,11 @@ __fastcall TController::TController(TComponent* Owner) : TForm(Owner) {
 	}
 }
 
-void __fastcall TController::Button1Click(TObject *Sender) {
-	Presentation->BorderStyle=bsNone;
-	Presentation->WindowState = wsMaximized;
-}
-
-void __fastcall TController::Button2Click(TObject *Sender) {
-	Presentation->BorderStyle=bsSizeable;
-	Presentation->WindowState = wsNormal;
-}
-
 void __fastcall TController::FormKeyPress(TObject *Sender, System::WideChar &Key) {
 	if (Key == VK_ESCAPE) {
 		Key = 0;
-		Button2->Click();
+		ToggleFS->Down = false;
+		ToggleFSClick(this);
 	}
 }
 
@@ -37,3 +28,14 @@ void __fastcall TController::Pre_Resize() {
 	Label1->Caption = (String)"Height: " + Presentation->Height;
 	Label2->Caption = (String)"Width: " + Presentation->Width;
 }
+void __fastcall TController::ToggleFSClick(TObject *Sender) {
+	if (ToggleFS->Down) {
+    	Presentation->BorderStyle=bsNone;
+		Presentation->WindowState = wsMaximized;
+	} else {
+		Presentation->BorderStyle=bsSizeable;
+		Presentation->WindowState = wsNormal;
+    }
+}
+//---------------------------------------------------------------------------
+
