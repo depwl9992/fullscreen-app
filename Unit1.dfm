@@ -11,6 +11,7 @@ object Controller: TController
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13

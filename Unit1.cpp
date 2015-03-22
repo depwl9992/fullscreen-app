@@ -39,3 +39,10 @@ void __fastcall TController::ToggleFSClick(TObject *Sender) {
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TController::FormClose(TObject *Sender, TCloseAction &Action) {
+	if (Presentation) {
+    	Presentation->Close();
+	}
+}
+//---------------------------------------------------------------------------
+

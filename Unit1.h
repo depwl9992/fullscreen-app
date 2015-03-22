@@ -18,6 +18,7 @@ __published:	// IDE-managed Components
 	TSpeedButton *ToggleFS;
 	void __fastcall FormKeyPress(TObject *Sender, System::WideChar &Key);
 	void __fastcall ToggleFSClick(TObject *Sender);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TController(TComponent* Owner);
