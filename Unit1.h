@@ -22,6 +22,7 @@ __published:	// IDE-managed Components
 private:	// User declarations
 public:		// User declarations
 	__fastcall TController(TComponent* Owner);
+	void __fastcall TController::Pre_Resize(void);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TController *Controller;

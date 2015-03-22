@@ -13,3 +13,8 @@ __fastcall TPresentation::TPresentation(TComponent* Owner) : TForm(Owner) {
 	Show();
 
 }
+void __fastcall TPresentation::FormResize(TObject *Sender) {
+	Controller->Pre_Resize();
+}
+//---------------------------------------------------------------------------
+

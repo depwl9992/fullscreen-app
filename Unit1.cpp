@@ -37,3 +37,8 @@ void __fastcall TController::FormKeyPress(TObject *Sender, System::WideChar &Key
 		Button2->Click();
 	}
 }
+
+void __fastcall TController::Pre_Resize() {
+	Label1->Caption = (String)"Height: " + Presentation->Height;
+	Label2->Caption = (String)"Width: " + Presentation->Width;
+}
